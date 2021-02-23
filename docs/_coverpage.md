@@ -1,10 +1,8 @@
-# docsify <small>3.5</small>
+## LeetCode 题解
 
-> A magical documentation site generator.
+> 每日至少一题，具体看心情。
 
-- Simple and lightweight
-- No statically built html files
-- Multiple themes
+- JavaScript 解法
 
-[GitHub](https://github.com/docsifyjs/docsify/)
-[Get Started](#docsify)
+[GitHub](https://github.com/CLgang/leetcode-note)
+[CSDN](https://blog.csdn.net/csdn9_14)
