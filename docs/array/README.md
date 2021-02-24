@@ -447,6 +447,7 @@ var isToeplitzMatrix = function(matrix) {
 
 
 ## 832.翻转图像 <small>(中等)</small>
+##### 题目描述：
 
 给定一个二进制矩阵 A，我们想先水平翻转图像，然后反转图像并返回结果。
 
@@ -477,7 +478,7 @@ var isToeplitzMatrix = function(matrix) {
 > 异或表示当两个数的二进制表示，进行异或运算时，当前位的两个二进制表示不同则为1相同则为0.
 > 即0^0 = 0, 0^1 = 1, 1^0 = 1, 1^1 = 0
 
-**代码**
+**代码：**
 ```javascript
 /**
  * @param {number[][]} A

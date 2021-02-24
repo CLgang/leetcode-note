@@ -1,5 +1,7 @@
 - [一、简介](/)
 - 二、概念
+    - [数据结构](concept/data-structure.md)
+    - [基础算法](concept/algorithm.md)
 - 三、题解
     - [数组](array/README.md)
 - 四、周赛
