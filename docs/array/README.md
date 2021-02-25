@@ -502,6 +502,48 @@ var flipAndInvertImage = function(A) {
 
 ------
 
+## 867.转置矩阵
+###### 题目描述：
+给你一个二维整数数组 matrix， 返回 matrix 的 转置矩阵 。
+
+矩阵的 转置 是指将矩阵的主对角线翻转，交换矩阵的行索引与列索引。
+
+##### 示例1：
+```
+输入：matrix = [[1,2,3],[4,5,6],[7,8,9]]
+输出：[[1,4,7],[2,5,8],[3,6,9]]
+```
+##### 示例2：
+```
+输入：matrix = [[1,2,3],[4,5,6]]
+输出：[[1,4],[2,5],[3,6]]
+```
+
+##### 题解：
+**解题思路**
+1. 假设矩阵为*n* 行, *m* 列, 即：*n = matrix.length, m = matrix[0].length* 则转置后的矩阵为*m* 行,*n* 列。
+2. 创建一个*m* 行, *n* 列的新矩阵，然后根据规则给其赋值。
+
+**代码**
+```javascript
+/**
+ * @param {number[][]} matrix
+ * @return {number[][]}
+ */
+var transpose = function(matrix) {
+    const n = matrix.length; m = matrix[0].length
+    const arr = new Array(m).fill(0).map(() => new Array(n).fill(0))
+    for(let i = 0; i < n; i ++) {
+        for(let j = 0; j < m; j ++) {
+            arr[j][i] = matrix[i][j]
+        }
+    }
+    return arr
+};
+```
+
+------
+
 ## 1004.最大连续1的个数III <small>（中等）</small>
 
 ##### 题目描述：
@@ -630,5 +672,3 @@ var maxSatisfied = function(customers, grumpy, X) {
     return initSum + maxSum
 };
 ```
-
-------
