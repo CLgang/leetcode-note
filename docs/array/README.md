@@ -673,6 +673,58 @@ var maxSatisfied = function(customers, grumpy, X) {
 };
 ```
 
+## 1502. 判断能否形成等差数列
+
+##### 题目描述
+
+给你一个数字数组 arr 。
+
+如果一个数列中，任意相邻两项的差总等于同一个常数，那么这个数列就称为 等差数列 。
+
+如果可以重新排列数组形成等差数列，请返回 true ；否则，返回 false 。
+
+##### 示例一：
+
+```
+输入：arr = [3,5,1]
+输出：true
+解释：对数组重新排序得到 [1,3,5] 或者 [5,3,1] ，任意相邻两项的差分别为 2 或 -2 ，可以形成等差数
+```
+
+##### 示例二：
+```
+输入：arr = [1,2,4]
+输出：false
+解释：无法通过重新排序得到等差数列。
+```
+
+##### 题解：
+**解题思路**
+
+1. 给数组排序，生成一个从小到大的新数组。
+2. 等差数列：从第二个数起，其值等于前后两个数之和。
+3. 所以循环可从下标1开始到arr.length - 1。
+
+**代码**
+
+```javascript
+/**
+ * @param {number[]} arr
+ * @return {boolean}
+ */
+var canMakeArithmeticProgression = function(arr) {
+    arr.sort((a, b) => a - b)
+    for(let i = 1; i < arr.length - 1; i ++) {
+        if(arr[i] * 2 !== arr[i - 1] + arr[i + 1]) {
+            return false
+        }
+    }
+    return true
+};
+```
+
+-------
+
 ## 1769. 移动所有球到每个盒子所需的最小操作数 <small>中等</small>
 ##### 题目描述：
 有 n 个盒子。给你一个长度为 n 的二进制字符串 boxes ，其中 boxes[i] 的值为 '0' 表示第 i 个盒子是 空 的，而 boxes[i] 的值为 '1' 表示盒子里有 一个 小球。
