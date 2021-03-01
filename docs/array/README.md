@@ -1,4 +1,4 @@
-## 1.两数之和 <small>（简单）</small>
+## 1.两数之和
 ##### 题目描述：
 
 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 的那 两个 整数，并返回它们的数组下标。
@@ -83,7 +83,7 @@ var twoSum = function(nums, target) {
 
 ------
 
-## 15.三数之和 <small>（中等）</small>
+## 15.三数之和
 
 ##### 题目描述：
 
@@ -180,7 +180,7 @@ var threeSum = function(nums) {
 
 ------
 
-## 18.四数之和 <small>（中等）</small>
+## 18.四数之和
 
 ##### 题目描述：
 
@@ -296,7 +296,7 @@ var fourSum = function(nums, target) {
 
 ------
 
-## 697.数组的度 <small>（简单）</small>
+## 697.数组的度
 
 ##### 题目描述：
 
@@ -375,7 +375,7 @@ var findShortestSubArray = function(nums) {
 
 ------
 
-## 766.托普利茨矩阵 <small>（简单）</small>
+## 766.托普利茨矩阵
 
 ##### 题目描述：
 
@@ -446,7 +446,7 @@ var isToeplitzMatrix = function(matrix) {
 ------
 
 
-## 832.翻转图像 <small>(中等)</small>
+## 832.翻转图像
 ##### 题目描述：
 
 给定一个二进制矩阵 A，我们想先水平翻转图像，然后反转图像并返回结果。
@@ -673,7 +673,7 @@ var largestPerimeter = function(A) {
 
 ------
 
-## 1004.最大连续1的个数III <small>（中等）</small>
+## 1004.最大连续1的个数III
 
 ##### 题目描述：
 
@@ -854,7 +854,7 @@ var canMakeArithmeticProgression = function(arr) {
 
 -------
 
-## 1769. 移动所有球到每个盒子所需的最小操作数 <small>中等</small>
+## 1769. 移动所有球到每个盒子所需的最小操作数
 ##### 题目描述：
 有 n 个盒子。给你一个长度为 n 的二进制字符串 boxes ，其中 boxes[i] 的值为 '0' 表示第 i 个盒子是 空 的，而 boxes[i] 的值为 '1' 表示盒子里有 一个 小球。
 
