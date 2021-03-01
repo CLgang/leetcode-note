@@ -6,4 +6,5 @@
     - [数组](array/README.md)
     - [字符串](string/README.md)
     - [动态规划](dynamic_programming/README.md)
+    - [位运算](bitwise/README.md)
 - 四、周赛
