@@ -356,6 +356,60 @@ var containsDuplicate = function(nums) {
     return false
 };
 ```
+------
+
+## 219. 存在重复元素 II
+
+##### 题目描述
+
+给定一个整数数组和一个整数 k，判断数组中是否存在两个不同的索引 i 和 j，使得 nums [i] = nums [j]，并且 i 和 j 的差的 绝对值 至多为 k。
+
+##### 示例一
+```
+输入: nums = [1,2,3,1], k = 3
+输出: true
+```
+##### 示例二
+```
+输入: nums = [1,0,1,1], k = 1
+输出: true
+```
+##### 示例三
+```
+输入: nums = [1,2,3,1,2,3], k = 2
+输出: false
+```
+##### 解题思路
+
+1. 创建hashMap表用来存储数组不同的值。
+2. 遍历数组nums，当hashMap表中不存在nums[i]时，将其添加hashMap,并赋值为i，记录第一次出现的位置下标。
+3. 当第二次出现时，去比较当前下标与之前出现的位置相差是否超过k，没超过则返回true,超过了则将hashMap[nums[i]]的值记录为当前出现的位置下标。
+4. 如此循环，循环结束返回false。
+
+**代码**
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {boolean}
+ */
+var containsNearbyDuplicate = function(nums, k) {
+    const hashMap = {}
+    for(let i = 0; i < nums.length; i ++) {
+        if(hashMap[nums[i]] === undefined) {
+            hashMap[nums[i]] = i
+        } else {
+            if(i - hashMap[nums[i]] <= k) {
+                return true
+            } else {
+                hashMap[nums[i]] = i
+            }
+        }
+    }
+    return false
+};
+```
 
 ------
 
