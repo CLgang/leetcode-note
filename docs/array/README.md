@@ -610,7 +610,7 @@ var longestOnes = function(A, K) {
 
 ------
 
-## 1052.爱生气的书店老板 <small>(中等)</small>
+## 1052.爱生气的书店老板
 
 ##### 题目描述：
 
