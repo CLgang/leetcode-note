@@ -181,7 +181,6 @@ var threeSum = function(nums) {
 ------
 
 ## 18.四数之和
-
 ##### 题目描述：
 
 给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a，b，c 和 d ，使得 a + b + c + d 的值与 target 相等？找出所有满足条件且不重复的四元组。
@@ -291,6 +290,70 @@ var fourSum = function(nums, target) {
         }
     }
     return result
+};
+```
+------
+
+## 217. 存在重复元素
+
+##### 题目描述
+
+给定一个整数数组，判断是否存在重复元素。
+
+如果存在一值在数组中出现至少两次，函数返回 true 。如果数组中每个元素都不相同，则返回 false 。
+
+##### 示例一：
+```
+输入: [1,2,3,1]
+输出: true
+```
+##### 示例二：
+```
+输入: [1,2,3,4]
+输出: false
+```
+##### 示例三：
+```
+输入: [1,1,1,3,3,4,3,2,4,2]
+输出: true
+```
+
+##### 解题思路
+
+**方法一：哈希表** 
+
+    对于数组中每个元素，我们将它插入到哈希表中。如果插入一个元素时发现该元素已经存在于哈希表中，则说明存在重复的元素。
+
+```javascript
+/**
+ * @param {number[]} nums
+ * @return {boolean}
+ */
+var containsDuplicate = function(nums) {
+    const hashMap = {}
+    for(let i = 0; i < nums.length; i ++) {
+        if(hashMap[nums[i]] === undefined) {
+            hashMap[nums[i]] = 1
+        } else {
+            return true
+        }
+    }
+    return false
+};
+```
+**方法二： 排序**
+
+    在对数字从小到大排序之后，数组的重复元素一定出现在相邻位置中。因此，我们可以扫描已排序的数组，每次判断相邻的两个元素是否相等，如果相等则说明存在重复的元素。
+
+```javascript
+var containsDuplicate = function(nums) {
+    nums.sort((a, b) => a - b)
+    for(let i = 0; i < nums.length; i ++) {
+        if(nums[i] === nums[i + 1]) {
+            return true
+        }
+    }
+    return false
 };
 ```
 
