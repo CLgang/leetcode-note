@@ -18,13 +18,30 @@
       loadSidebar: true,
       auto2top: true,
       subMaxLevel: 2, // 侧边栏显示层级
+      formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}:{ss}',
       search: {
         maxAge: 86400000,
         paths: 'auto',
         placeholder: '搜索',
         noData: '找不到结果',
-        depth: 3, // 1 - 6
-      }
+        depth: 2, // 1 - 6
+      },
+      count:{
+        countable:true,
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese'
+      },
+      plugins: [
+        function(hook) {
+          hook.beforeEach(function(html) {
+            var footer = [
+              'Last modified {docsify-updated}.'
+            ]
+            return html + '\n' + footer
+          })
+        }
+      ]
     }
   </script>
   <!-- Docsify v4 -->
